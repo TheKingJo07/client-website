@@ -29,18 +29,25 @@
 //   },
 // });
 
-import { defineConfig } from "@lovable.dev/vite-tanstack-config";
+// import { defineConfig } from "@lovable.dev/vite-tanstack-config";
+
+// export default defineConfig({
+//   vite: {
+//     server: {
+//       fs: {
+//         allow: [".."]
+//       }
+//     }
+//   },
+
+//   tanstackStart: {
+//     server: { entry: "server" }
+//   }
+// });
+
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
 
 export default defineConfig({
-  vite: {
-    server: {
-      fs: {
-        allow: [".."]
-      }
-    }
-  },
-
-  tanstackStart: {
-    server: { entry: "server" }
-  }
+  plugins: [react()],
 });
